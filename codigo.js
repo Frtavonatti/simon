@@ -23,7 +23,7 @@ class Juego {
   }
 
   generarSecuencia() {
-    this.secuencia = new Array(10).fill(0).map(n => Math.floor(Math.random() * 4))
+    this.secuencia = new Array(10).fill(0).map(() => Math.floor(Math.random() * 4))
   }
 
   siguienteNivel() {
@@ -55,7 +55,7 @@ class Juego {
     setTimeout(() => this.apagarColor(color), 350)
   }
 
-  apagarColor() {
+  apagarColor(color) {
     this.colores[color].classList.remove('light')
   }
 }
